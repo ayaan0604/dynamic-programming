@@ -5,4 +5,4 @@ Leetcode 3211 ✅
 Leetcode Permutations II ✅ 
 is the maze solvable? ❌
 gfg rat in a maze❌
-Leetcode N-Queens ❌
+Leetcode N-Queens ✅
