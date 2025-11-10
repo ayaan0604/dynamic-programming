@@ -1,0 +1,3 @@
+valid sudoku leetcode✅
+n queens leetcode✅
+n queens 2 leetcode✅
