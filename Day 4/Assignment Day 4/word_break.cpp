@@ -1,5 +1,5 @@
 //leetcode 139
-// testcases passed, giving TLE (have to use dp)
+// accepted on leetcode
 
 class Solution {
 private:
@@ -10,15 +10,20 @@ bool isMatch(string word, string& s,int idx){
     return true;
 }
 
-void solve(string& s, vector<string>& wordDict, bool* ans,int idx=0){
+void solve(string& s, vector<string>& wordDict, bool* ans, vector<bool>& dp, int idx=0){
     if(idx>=s.size()){
+        dp[idx] =true;
         *ans = true;
         return;
     }
+
+    if(dp[idx]) return;
+
     for(string word : wordDict){
         if(isMatch(word, s, idx)){
+            dp[idx] = true;
             //try for next word
-            solve(s, wordDict, ans, idx+word.size());
+            solve(s, wordDict, ans, dp, idx+word.size());
         }
     }
 }
@@ -27,8 +32,8 @@ void solve(string& s, vector<string>& wordDict, bool* ans,int idx=0){
 public:
     bool wordBreak(string s, vector<string>& wordDict) {
         bool ans= false;
-
-        solve(s, wordDict, &ans );
+        vector<bool> dp(s.size(), false);
+        solve(s, wordDict, &ans, dp );
 
         return ans;
     }

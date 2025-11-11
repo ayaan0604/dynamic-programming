@@ -1,0 +1,11 @@
+1) geek Jump gfg ✅
+
+2) Frog jump but allowed number of steps are K, also integrate dp ✅
+
+3) leetcode - 198 HOUSE ROBBER ✅
+
+4) leetcode 213 - House Robber II ✅
+
+5) Codeforces 455A - Boredom
+
+
